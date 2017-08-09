@@ -1,0 +1,83 @@
+extends ./layout.pug
+
+block title
+  title Alejandra Canahui - Software Engineer
+
+block meta
+  meta(property='og:url' content=host)
+  meta(property='og:title' content='Alejandra Canahui')
+  meta(property='og:image' content=host + '/public/img/share.jpg')
+
+block content
+  div.grid-container
+    div.grid-x.grid-padding-x
+      div.large-12.cell
+        h1 Alejandra Canahui
+        p Software builder from Guatemala City. I love to think up and develop solutions that reach and help other humans.
+        ul
+          li
+            a(href='https://github.com/aleknaui' target='_blank') github.com/aleknaui
+          li
+            a(href='https://twitter.com/aleknaui' target='_blank') twitter.com/aleknaui
+    div.grid-x.grid-padding-x
+      div.large-12.cell
+        div.callout
+          h3 Skills
+          div.grid-x.grid-padding-x
+            div.large-6.medium-6.cell
+              h4 Computing
+              div.grid-x.grid-padding-x
+                div.large-4.medium-4.cell
+                  ul
+                    li NodeJS
+                    li JavaScript
+                    li PHP
+                    li Python
+                    li Java
+                div.large-4.medium-4.cell
+                  ul
+                    li Hybrid apps
+                    li Offline-first apps
+                    li ExpressJS
+                    li NPM/Bower
+                    li Gulp/Grunt
+                    li Django
+                div.large-4.medium-4.cell
+                  ul
+                    li MySQL
+                    li Postgres
+                    li CouchDB/PouchDB
+                    li Redis
+            div.large-6.medium-6.cell
+              h4 Languages
+              ul
+                li Spanish (Native)
+                li English (Working proficiency)
+      div.large-12.cell
+        div.callout
+          h3 Work experience
+          div.grid-x.grid-padding-x
+            div.large-6.medium-6.cell
+              h4 Kingo Energy 
+                small (2015-present)
+              p 
+                a(href='https://kingoenergy.com' target='_blank') kingoenergy.com
+              p
+                | I'm currently TURNING LIVES ON! by working on 
+                a(href='https://kingoenergy.com/kingos-ant-platform/' target='_blank') Kingo's Ant Platform
+                |  in order to provide energy access to off-the-grid communities.
+            div.large-6.medium-6.cell
+              h4 GLIFOS 
+                small (2011-2015)
+              p 
+                a(href='http://glifos.com' target='_blank') glifos.com
+              p
+                | While there, I worked on several knowledge preservation tools. My main achievement was developing
+                | a modern, cloud-based version of the GLIFOS - library system.
+          h3 Side projects
+          div.grid-x.grid-padding-x
+            div.large-6.medium-6.cell
+              h4 radio impropia
+              p
+                a(href='http://radioimpropia.com' target='_blank') radioimpropia.com
+              p I produced/hosted a comedy podcast and built a platform to publish its content to a custom website.

@@ -1,0 +1,54 @@
+"use strict"
+
+/**
+ * Module dependencies.
+ */
+
+var express = require('express')
+  , bodyParser = require('body-parser')
+  , serveStatic = require('serve-static')
+  , vhost = require('vhost');
+
+// -------------------------------------------------------
+// Website
+// -------------------------------------------------------
+
+var website = express();
+
+// Configuration
+website.set('views', __dirname + '/views');
+website.set('view engine', 'pug');
+
+website.use(bodyParser.urlencoded({extended: true}));
+
+// Routes
+website.use('/', require('./routes/index'));
+website.use('/public', express.static('public'));
+
+// -------------------------------------------------------
+// virtual hosts
+// -------------------------------------------------------
+
+var app = express();
+
+app.use(vhost('www.alejandra.canahui.com', website));
+app.use(vhost('alejandra.canahui.com', website));
+
+// Handle 404
+app.use(function(req, res) {
+  res.status(400);
+  res.render('404');
+});
+
+// Handle 500
+app.use(function(error, req, res, next) {
+  res.status(500);
+  res.render('500', {title: '500: Internal Server Error', error: error});
+});
+
+app.set('port', process.env.PORT || 3000);
+
+
+var server = app.listen(app.get('port'), function(){
+  console.log("Express server listening on port %d", server.address().port);
+});

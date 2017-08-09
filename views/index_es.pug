@@ -1,0 +1,85 @@
+extends ./layout.pug
+
+block title
+  title Alejandra Canahui - Ingeniera de Software
+
+block meta
+  meta(property='og:url' content=host)
+  meta(property='og:title' content='Alejandra Canahui')
+  meta(property='og:image' content=host + '/public/img/share.jpg')
+
+block content
+  div.grid-container
+    div.grid-x.grid-padding-x
+      div.large-12.cell
+        h1 Alejandra Canahui
+        p Guatemalteca dedicada a hacer software. Disfruto idear y desarrollar soluciones que alcancen y ayuden a otras personas.
+        ul
+          li
+            a(href='https://github.com/aleknaui' target='_blank') github.com/aleknaui
+          li
+            a(href='https://twitter.com/aleknaui' target='_blank') twitter.com/aleknaui
+    div.grid-x.grid-padding-x
+      div.large-12.cell
+        div.callout
+          h3 Habilidades
+          div.grid-x.grid-padding-x
+            div.large-6.medium-6.cell
+              h4 Computación
+              div.grid-x.grid-padding-x
+                div.large-4.medium-4.cell
+                  ul
+                    li NodeJS
+                    li JavaScript
+                    li PHP
+                    li Python
+                    li Java
+                div.large-4.medium-4.cell
+                  ul
+                    li Apps híbridas
+                    li Apps offline-first
+                    li ExpressJS
+                    li NPM/Bower
+                    li Gulp/Grunt
+                    li Django
+                div.large-4.medium-4.cell
+                  ul
+                    li MySQL
+                    li Postgres
+                    li CouchDB/PouchDB
+                    li Redis
+            div.large-6.medium-6.cell
+              h4 Idiomas
+              ul
+                li Español (Nativo)
+                li Inglés (Proficiencia de trabajo)
+      div.large-12.cell
+        div.callout
+          h3 Experiencia laboral
+          div.grid-x.grid-padding-x
+            div.large-6.medium-6.cell
+              h4 Kingo Energy 
+                small (2015-presente)
+              p 
+                a(href='https://kingoenergy.com' target='_blank') kingoenergy.com
+              p
+                | Estoy ENCENDIENDO VIDAS! Trabajando en 
+                a(href='https://kingoenergy.com/kingos-ant-platform/' target='_blank') la plataforma Ant de Kingo
+                |  para proveer acceso a la energía a comunidades fuera de la red eléctrica.
+            div.large-6.medium-6.cell
+              h4 GLIFOS 
+                small (2011-2015)
+              p 
+                a(href='http://glifos.com' target='_blank') glifos.com
+              p
+                | Trabajé en varios proyectos de preservación del conocimiento. Mi principal logro fue desarrollar
+                | una versión moderna y basada en la nube del sistema GLIFOS - library.
+          h3 Proyectos alternos
+          div.grid-x.grid-padding-x
+            div.large-6.medium-6.cell
+              h4 radio impropia
+              p
+                a(href='http://radioimpropia.com' target='_blank') radioimpropia.com
+              p
+                | Produje/dirigí un podcast de comedia y construí una plataforma para publicar el contenido a un
+                | sitio web personalizado.
