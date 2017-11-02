@@ -1,0 +1,1 @@
+particlesJS.load('hero', 'public/js/scripts/index-particles.json');

@@ -8,76 +8,87 @@ block meta
   meta(property='og:title' content='Alejandra Canahui')
   meta(property='og:image' content=host + '/public/img/share.jpg')
 
+block body_scripts
+  script(src='public/js/lib/rellax.js')
+  script(src='public/js/lib/particles.js')
+  script(src='public/js/scripts/index.js')
+
 block content
-  div.grid-container
-    div.grid-x.grid-padding-x
-      div.large-12.cell
-        h1 Alejandra Canahui
-        p Software builder from Guatemala City. I love to think up and develop solutions that reach and help other humans.
-        ul
-          li
-            a(href='https://github.com/aleknaui' target='_blank') github.com/aleknaui
-          li
-            a(href='https://twitter.com/aleknaui' target='_blank') twitter.com/aleknaui
-    div.grid-x.grid-padding-x
-      div.large-12.cell
-        div.callout
-          h3 Skills
-          div.grid-x.grid-padding-x
-            div.large-6.medium-6.cell
-              h4 Computing
-              div.grid-x.grid-padding-x
-                div.large-4.medium-4.cell
-                  ul
-                    li NodeJS
-                    li JavaScript
-                    li PHP
-                    li Python
-                    li Java
-                div.large-4.medium-4.cell
-                  ul
-                    li Hybrid apps
-                    li Offline-first apps
-                    li ExpressJS
-                    li NPM/Bower
-                    li Gulp/Grunt
-                    li Django
-                div.large-4.medium-4.cell
-                  ul
-                    li MySQL
-                    li Postgres
-                    li CouchDB/PouchDB
-                    li Redis
-            div.large-6.medium-6.cell
+  div#main-wrapper
+    // Top bar
+    div.top-bar-container(data-sticky-container style='display:none;')
+      div.sticky(data-sticky data-margin-top='0')
+        div.top-bar.menu
+          div.top-bar-left
+            strong Alejandra Canahui
+          div.top-bar-right
+
+    // Hero section
+    section#hero
+      div.hero.row
+        div.hero-content.column.small-12.small-centered.medium-8
+          img(src='public/img/me.jpg')
+          h1 Alejandra Canahui
+          p.lead Software builder from Guatemala City. I love to think up and develop solutions that reach and help other humans.
+
+    // About section
+    section#about
+      div.about.row
+        div.about-content.column.small-12.small-centered.medium-8
+          h2 About me
+          p.lead
+            | I'm a Computer Science Engineer. My experience has been with both
+            | custom client projects and in-house systems development, specially in
+            | the backend side. I'm commited to build quality products and to
+            | learn all that is necessary to do just that.
+
+          p.lead
+            | Some of my other interests are: comedy, theater, music, books, board games and camping.
+
+    // Skills section
+    section#skills
+      div.skills.row
+        div.skills-content.column.small-10.small-centered
+          h2 Skills
+          div.row
+            div.column.small-12.medium-4
+              h4 Programming languages
+              ul
+                li NodeJS
+                li JavaScript
+                li PHP
+                li Python
+                li Java
+            div.column.small-12.medium-4
+              h4 Libraries
+              ul
+                li ExpressJS
+                li Django
+                li Yii
+                li Cordova/Phonegap/Ionic
+                li NPM/Bower
+                li Gulp/Grunt
+            div.column.small-12.medium-4
+              h4 Databases
+              ul
+                li CouchDB
+                li PouchDB
+                li MySQL
+                li Postgresql
+                li Redis
+          div.row
+            div.column.small-12.medium-4
+              h4 Additional knowledge
+              ul
+                li Scrum
+                li Hybrid mobile apps
+                li Offline-first apps
+                li API development
+                li Server management
+                li Linux
+            div.column.small-12.medium-4
               h4 Languages
               ul
-                li Spanish (Native)
+                li Spanish (Native language)
                 li English (Working proficiency)
-      div.large-12.cell
-        div.callout
-          h3 Work experience
-          div.grid-x.grid-padding-x
-            div.large-6.medium-6.cell
-              h4 Kingo Energy 
-                small (2015-present)
-              p 
-                a(href='https://kingoenergy.com' target='_blank') kingoenergy.com
-              p
-                | I'm currently TURNING LIVES ON! by working on 
-                a(href='https://kingoenergy.com/kingos-ant-platform/' target='_blank') Kingo's Ant Platform
-                |  in order to provide energy access to off-the-grid communities.
-            div.large-6.medium-6.cell
-              h4 GLIFOS 
-                small (2011-2015)
-              p 
-                a(href='http://glifos.com' target='_blank') glifos.com
-              p
-                | While there, I worked on several knowledge preservation tools. My main achievement was developing
-                | a modern, cloud-based version of the GLIFOS - library system.
-          h3 Side projects
-          div.grid-x.grid-padding-x
-            div.large-6.medium-6.cell
-              h4 radio impropia
-              p
-                a(href='http://radioimpropia.com' target='_blank') radioimpropia.com
-              p I produced/hosted a comedy podcast and built a platform to publish its content to a custom website.
+            div.column.small-12.medium-4

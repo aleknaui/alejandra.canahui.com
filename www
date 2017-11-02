@@ -4,16 +4,16 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , bodyParser = require('body-parser')
-  , serveStatic = require('serve-static')
-  , vhost = require('vhost');
+const express = require('express')
+const bodyParser = require('body-parser')
+const serveStatic = require('serve-static')
+const vhost = require('vhost');
 
 // -------------------------------------------------------
 // Website
 // -------------------------------------------------------
 
-var website = express();
+const website = express();
 
 // Configuration
 website.set('views', __dirname + '/views');
@@ -29,7 +29,7 @@ website.use('/public', express.static('public'));
 // virtual hosts
 // -------------------------------------------------------
 
-var app = express();
+const app = express();
 
 app.use(vhost('www.alejandra.canahui.com', website));
 app.use(vhost('alejandra.canahui.com', website));

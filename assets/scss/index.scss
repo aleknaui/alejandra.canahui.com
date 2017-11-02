@@ -1,0 +1,55 @@
+@mixin website-gradient-background($top, $bottom) {
+  background: linear-gradient(to bottom, $top, $bottom)
+}
+
+@mixin website-index {
+   section {
+    overflow: hidden;
+  }
+
+  #hero {
+    height: 100vh;
+    @include website-gradient-background($cyan, $pink)
+  }
+
+  .hero {
+    margin-top: 20vh;
+    background: transparent;
+
+    .hero-content {
+      padding: 20px;
+      background: transparent;
+      text-align: center;
+
+      img {
+        border-radius: 50%;
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
+  }
+
+  #about {
+    background-color: $dark-blue;
+    color: white;
+  }
+
+  .about {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    .about-content {
+
+    }
+  }
+
+  #skills {
+    height: 100vh;
+  }
+
+  .skills {
+    margin-top: 10vh;
+    .skills-content {
+
+    }
+  }
+}

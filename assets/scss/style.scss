@@ -1,0 +1,9 @@
+@mixin website-topbar {
+  .top-bar {
+    color: $topbar-color;
+  }
+
+  #main-wrapper {
+  	min-width: 320px;
+  }
+}

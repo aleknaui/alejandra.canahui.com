@@ -1,6 +1,4 @@
 'use strict';
-require('es6-promise').polyfill();
-
 const gulp = require('gulp');
 const mainBowerFiles = require('main-bower-files')
 const $ = require('gulp-load-plugins')();
@@ -46,6 +44,11 @@ gulp.task('build-js', function () {
       .pipe(gulp.dest('public/js'));
 });
 
+gulp.task('build-json', function () {
+  return gulp.src('assets/js/**/*.json')
+      .pipe(gulp.dest('public/js'));
+});
+
 gulp.task('build-img', function () {
   return gulp.src('assets/img/*')
     .pipe(gulp.dest('public/img'));
@@ -54,6 +57,7 @@ gulp.task('build-img', function () {
 gulp.task('default',[
   'build-libs',
   'build-js',
+  'build-json',
   'build-css',
   'build-img'
 ]);
@@ -61,5 +65,6 @@ gulp.task('default',[
 gulp.task('watch', function () {
   gulp.watch('assets/scss/**/*.scss', ['build-css']);
   gulp.watch('assets/js/**/*.js', ['build-js']);
+  gulp.watch('assets/js/**/*.json', ['build-json']);
   gulp.watch('assets/img/**/*', ['build-img']);
 });
